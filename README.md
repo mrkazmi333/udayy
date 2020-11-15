@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+## Hosted Link here: https://auth-development-ed961.web.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Index
 
-## Available Scripts
+- [About](#about)
+- [Preview](#preview)
+- [Usage](#usage)
+  - [Pre-Requisites](#pre-requisites)
+  - [Development Environment](#development-environment)
+  - [Firebase/Authentication](#authentication-firebase)
+  - [File Structure](#file-structure)
+  - [Commands](#command)
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+Made this webpage as an assignment given to me for Udayy hiring process.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Preview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
 
-### `npm test`
+To use this code, make sure you have all the `pre-requisites` and your `development environment` is ready. After that you can read about the `file-structure`, which also explains about project structure and how things are working in background. Commands will tell you about the important `commands` you should konow.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pre-requisites
 
-### `npm run build`
+In order to work on this project or to develop it, you need to have some pre-installed tools and knowledge about them. Below are the tools you need to install on your system:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- NPM
+- Nodejs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Authentication/Firebase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You need have a google account to setup firease project so that you can make authentication on this app. I've used firbase authentication because it is less time conusimg and simple to configure.
 
-### `npm run eject`
+#### Steps for Firebase Authentication connection
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Go to https://console.firebase.google.com/ and click on Add project.
+2. Then Enter the name of your project that you like to call
+3. Then Go to the Side menu and click on Authentication, this will open a new page where inside user just enable the Email/Password
+4. After that Click on Project Overview and click on the WebApp and give a nickname to your webapp.
+5. Now go inisde the WebApp and copy the all the `Key: values` from the `Firebase SDK Snippet` and paste it inside the `firebase.js` file on the local repository.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Development Environment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Once you have all the requirements checked out, you can develop this project. You need to set up the development environment to work on it. Follow the steps given below to setup:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone this repository, write in terminal `git clone https://github.com/mrkazmi333/udayy.git`.
+2. Go inside the cloned folder using `$ cd udayy`, and install all the dependencies. `$ npm install`
+3. To test run the dev server. `$ npm start`
 
-## Learn More
+### File Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| No  | File/Folder name   | Details                                                                       |
+| --- | ------------------ | ----------------------------------------------------------------------------- |
+| 1   | ./src              | Contains un-built application source code.                                    |
+| 4   | ./src/contexts     | For creating a common data layer to get all the components the access to data |
+| 5   | ./src/index.css    | Style for the project.                                                        |
+| 6   | ./node_modules/... | Auto installed node packages.                                                 |
+| 7   | package.json       | NPM package file for this project.                                            |
+| 8   | package-lock.json  | NPM packages details.                                                         |
+| 9   | .gitignore         | To ignore files to be a part of version control.                              |
+| 10  | ./assets           | For storing the images of application preview.                                |
+| 11  | ./build            | Webpack output the build here, which is then hosted by github pages.          |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Commands
 
-### Code Splitting
+- Installing all the dependencies.
+  ```
+  npm install
+  ```
+- Starting development server.
+  ```
+  npm start
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Build
 
-### Analyzing the Bundle Size
+To build the project for production, you can use the following command. The output will be dumped in `/build` folder which is used by the github pages to host the site.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+$ npm run build
+```
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to add your own features or improve this one, any kind of help is appreciated.
